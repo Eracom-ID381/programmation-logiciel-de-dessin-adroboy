@@ -4,11 +4,14 @@ function setup() {
 }
 
 function draw() {
-    fill(255);
+    noFill();
     if (mouseIsPressed) {
-        ellipse(width / 2, height / 2, mouseX, mouseY);
-    } else if (mouseX >= 100 && mouseX < 300) {
-        fill(200, 0, 0);
+        ellipse(mouseX, mouseY, mouseX / 3, mouseY / 3);
+        if (mouseX > width / 2) {
+            stroke(255, 100, 0)
+        } else {
+            stroke(0, 255, 0);
+        }
     }
 }
 
