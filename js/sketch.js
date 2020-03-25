@@ -1,4 +1,5 @@
 let mode = 0;
+let tri = 30;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -20,13 +21,13 @@ function draw() {
         } else if (mode == 1) {
             rect(mouseX, mouseY, mouseX / 3, mouseY / 3);
             if (mouseX > width / 2) {
-                stroke(150, 150, 0)
+                stroke(250, 250, 0)
             } else {
                 stroke(0, 0, 225)
             }
 
         } else if (mode == 2) {
-            triangle(mouseX + 30, mouseY - 30, mouseX + 30, mouseY + 30, mouseX - 30, mouseY + 30);
+            triangle map(mouseX, mouseY - tri, mouseX - tri, mouseY + tri, mouseX + tri, mouseY - tri);
             if (mouseX > width / 2) {
                 stroke(125, 0, 125)
             } else {
