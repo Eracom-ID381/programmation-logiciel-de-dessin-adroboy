@@ -27,9 +27,9 @@ function draw() {
             }
 
         } else if (mode == 2) {
-            triangle map(mouseX, mouseY - tri, mouseX - tri, mouseY + tri, mouseX + tri, mouseY - tri);
-            if (mouseX > width / 2) {
-                stroke(125, 0, 125)
+            let tri = map(mouseX, 0, width, 0, 100);
+            triangle(mouseX, mouseY - tri, mouseX - tri, mouseY + tri, mouseX + tri, mouseY - tri);
+            stroke(125, 0, 125)
             } else {
                 stroke(0, 100, 255)
             }
@@ -44,7 +44,7 @@ function draw() {
     // } else if (mode === 1) {
     //     rect(mouseX, mouseY, mouseX / 3, mouseY / 3)
     // } else if (mode === 2) {}
-}
+
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
